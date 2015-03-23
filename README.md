@@ -4,9 +4,9 @@ Install ConfigServer Security &amp; Firewall
 #### Installation ####
 
 ```
-bash <(GET https://raw.github.com/bashcode/csf/master/install.sh) -i :: to install
-bash <(GET https://raw.github.com/bashcode/csf/master/install.sh) -u :: to uninstall
-bash <(GET https://raw.github.com/bashcode/csf/master/install.sh) -v :: current version
+sh install.sh -i :: to install
+sh install.sh -u :: to uninstall
+sh install.sh -v :: to print the current version
 ```
 
 #### Description ####
