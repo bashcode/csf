@@ -4,9 +4,9 @@
 #
 
 
-RED='\033[01;31m'
-GREEN='\033[01;32m'
-RESET='\033[0m'
+RED="\033[01;31m"
+GREEN="\033[01;32m"
+RESET="\033[0m"
 ver=v2.07;
 
 TEMPDIR="/root/tmp/csf"
