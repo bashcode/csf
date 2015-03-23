@@ -481,8 +481,8 @@ if [ -z "$(echo $1)" ]
 	{
 		echo "This is bashcode CSF installation script. Please run as follows :";
 		echo " ";
-		echo "bash <(GET https://raw.github.com/bashcode/csf/master/install.sh) -i :: to install"
-		echo "bash <(GET https://raw.github.com/bashcode/csf/master/install.sh) -u :: to uninstall"
-		echo "bash <(GET https://raw.github.com/bashcode/csf/master/install.sh) -v :: to print the current version";
+		echo "sh install.sh -i :: to install"
+		echo "sh install.sh -u :: to uninstall"
+		echo "sh install.sh -v :: to print the current version";
 	}
 fi
