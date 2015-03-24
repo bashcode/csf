@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # by Felipe Montes, @Gudw4L <gudwal@live.com>
-#
-
+# Changelog
+# 23-03-2015 : added cc_deny countries
 
 RED="\033[01;31m"
 GREEN="\033[01;32m"
@@ -256,8 +256,8 @@ configure_csf_conf(){
         echo "- Setting CT_BLOCK_TIME=900"
         sed -ie "s/^CT_BLOCK_TIME = .*/CT_BLOCK_TIME = \"900\"/g" /etc/csf/csf.conf
 
-	      echo "- Setting LF_SCRIPT_LIMIT=1000"
-	      sed -ie "s/^LF_SCRIPT_LIMIT = .*/LF_SCRIPT_LIMIT = \"1000\"/g" /etc/csf/csf.conf
+	echo "- Setting LF_SCRIPT_LIMIT=1000"
+	sed -ie "s/^LF_SCRIPT_LIMIT = .*/LF_SCRIPT_LIMIT = \"1000\"/g" /etc/csf/csf.conf
 
         echo "- Setting LF_SCRIPT_ALERT=1"
         sed -ie "s/^LF_SCRIPT_ALERT = .*/LF_SCRIPT_ALERT = \"1\"/g" /etc/csf/csf.conf
@@ -304,6 +304,9 @@ configure_csf_conf(){
         sed -ie "s/^LF_INTEGRITY = .*/LF_INTEGRITY = \"28800\"/g" /etc/csf/csf.conf
 
         echo "- Increasing POP3/hour from 60 to 120"
+        sed -ie "s/^LT_POP3D = .*/LT_POP3D = \"120\"/g" /etc/csf/csf.conf
+        
+        echo "- Disable malware countries"
         sed -ie "s/^LT_POP3D = .*/LT_POP3D = \"120\"/g" /etc/csf/csf.conf
 
 	if [ -e /usr/local ]; then
