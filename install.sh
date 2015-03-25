@@ -307,7 +307,7 @@ configure_csf_conf(){
         sed -ie "s/^LT_POP3D = .*/LT_POP3D = \"120\"/g" /etc/csf/csf.conf
         
         echo "- Disable malware countries"
-        sed -ie "s/^LT_POP3D = .*/LT_POP3D = \"120\"/g" /etc/csf/csf.conf
+        sed -ie "s/^CC_DENY = .*/CC_DENY = \"RU,CN,HK,JP,RO,TR,DZ,UA\"/g" /etc/csf/csf.conf
 
 	if [ -e /usr/local ]; then
 		echo "- Adding Rules for Plesk ports"
